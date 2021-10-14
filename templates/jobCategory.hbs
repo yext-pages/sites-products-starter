@@ -43,9 +43,11 @@
         
     {{>navbar}}
 
-    <div class="grid grid-cols-4 py-8 px-6 mx-auto">
-      <div class="col-span-3 tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-2xl mb-8">Open Technology roles near {{name}}</div>
-      <div class="mt-8 mb-8 col-span-1">Address {{address}}</div>
+    <div class="container py-8 px-6 mx-auto">
+      <div class="grid grid-cols-4">
+        <div class="col-span-3 tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-2xl mb-8">Open Technology roles near {{name}}</div>
+        <div class="mt-8 mb-8 col-span-1">Address {{address}}</div>
+      </div>
     </div>
     <div class="grid grid-cols-4 divide-gray-300 gap-3 pl-10">
         {{#each c_relatedJobs}}
