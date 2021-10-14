@@ -43,18 +43,11 @@
     {{>navbar}}
 
     <div class="container py-8 px-6 mx-auto">
-      <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-2xl mb-8">{{name}}</div>
+      <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-2xl mb-8">Open Technology roles near {{name}}</div>
       <p class="mt-8 mb-8">{{convertRTFToHTML richTextDescription}}</p>
     </div>
-
-    {{#each c_relatedJobs}}
-      <div class="grid grid-cols-7 divide-gray-300 divide-y-4 gap-3 pl-10">
-          <div class="col-span-2">
-              <div class="mb-5">
-                  {{>photoGallery photoGallery}}
-              </div>
-          </div>
-
+    <div class="grid grid-cols-7 divide-gray-300 divide-y-4 gap-3 pl-10"></div>
+        {{#each c_relatedJobs}}
           <div class="col-span-5">
               <div class="container py-8 px-6 mx-auto">
                   <div>
@@ -64,9 +57,8 @@
                   <p class="mt-8 mb-8 text-l">{{convertRTFToHTML description}}</p>
               </div>
           </div>
+        {{/each}}
       </div>
-    {{/each}}
-
     </body> 
   </div>
 
