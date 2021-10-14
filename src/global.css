@@ -3,14 +3,12 @@
 @tailwind utilities;
 
 section.heroBanner {
-    background: transparent -webkit-gradient(linear,left top,left bottom,from(#27005e),to(#532ab7)) 0 0 no-repeat padding-box;
-    background: transparent -o-linear-gradient(top,#053354 0,#006aa5 100%) 0 0 no-repeat padding-box;
-    background: transparent linear-gradient(
-180deg
-,#053354 0,#006aa5 100%) 0 0 no-repeat padding-box;
+    background: transparent -webkit-gradient(linear, left top, left bottom, from(#27005e), to(#532ab7)) 0 0 no-repeat padding-box;
+    background: transparent -o-linear-gradient(top, #053354 0, #006aa5 100%) 0 0 no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #053354 0, #006aa5 100%) 0 0 no-repeat padding-box;
 }
 
-
-
-
-
+.position-ent {
+    background-color: #00feff;
+    text-align: center;
+}
