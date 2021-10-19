@@ -7,8 +7,20 @@ section.heroBanner {
     background: transparent -o-linear-gradient(top, #053354 0, #006aa5 100%) 0 0 no-repeat padding-box;
     background: transparent linear-gradient(180deg, #053354 0, #006aa5 100%) 0 0 no-repeat padding-box;
 }
-
 .position-ent {
     background-color: #00feff;
     text-align: center;
+    transition: all linear .5s .1s;
+    position: relative;
+}
+.position-ent .desc_slide {
+    height: 0px;
+    overflow: hidden;
+    transition: all linear .5s .1s;
+}
+.position-ent:hover .desc_slide{
+    height: 112px;
+}
+.position-ent .txt-description{
+    height: 112px;
 }

@@ -50,7 +50,8 @@
         <div class="mt-8 mb-8 col-span-1">Address {{address}}</div>
       </div>
     </div>
-    <div class="grid grid-cols-4 divide-gray-300 gap-3 pl-10">
+    <div class="container py-8 px-6 mx-auto">
+      <div class="grid grid-cols-4 divide-gray-300 gap-3 px-10">
         {{#each c_relatedJobs}}
           <div class="col-span-1 position-ent">
               <div class="container py-8 px-6 mx-auto">
@@ -58,11 +59,14 @@
                     <p>Position</p>
                     <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-2xl mb-8 hover:text-blue-900" href={{slug}}>{{name}}</a>
                   </div>
-                  <p class="mt-8 mb-8 text-l">{{description}}</p>
+                  <div class="desc_slide">
+                    <p class="mt-8 mb-8 text-l txt-description">{{description}}</p>
+                  </div>
               </div>
           </div>
         {{/each}}
       </div>
+    </div>
     </body> 
   </div>
 
