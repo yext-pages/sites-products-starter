@@ -5,8 +5,11 @@
   "@id": "{{id}}",
   "@type": ["Product"],
   "name": "{{name}}",
-  "brand": "{{brand}}",
   "color": "{{color}}",
-  "image": "{{photoGallery.[0].image.url}}"
+  "image": "{{photoGallery.[0].image.url}}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{brand}}"
+  }
 }
 </script>
