@@ -40,6 +40,27 @@
     {{>head}}
     {{>schema-product}}
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+
+    {{!-- schema --}}
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@id": "{{id}}",
+            "@type": [
+                "LocalBusiness"
+            ],
+            "color": "{{color}}",
+            "description": "{{richTextDescription}}",
+            "image": "{{photoGallery[0].image.url}}",
+            "name": "{{name}}",
+            "offers": {
+                "@type": "Offer",
+                "price": "{{price.value}}",
+                "priceCurrency": "{{price.currencyCode}}"
+            }
+        }
+    </script>
+    
 </head>
 
 <div class="container mx-auto px-4">
