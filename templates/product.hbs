@@ -31,45 +31,62 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{name}}</title>
-    <meta name="description" content={{richTextDescription}}>
-    {{>head}}
-    {{>schema-product}}
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{{name}}</title>
+        <meta name="description" content={{richTextDescription}}>
+        {{>head}}
+        {{>schema-product}}
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+    </head>
 
-<div class="container mx-auto px-4">
     <body>
-        {{>navbar}}
-            <div class="grid grid-cols-2 divide-x gap-3 pl-10">
-                <div class="col-span-1">
-                    <div class="w-full md:w-full lg:scale-80 p-6 flex flex-col space-y-6">
-                        {{>photoGallery photoGallery}}
+        <div class="w-full">
+            {{>navbar}}
+            <div class="centered-container">
+                <div class="section grid gap-y-10 md:grid-cols-2 md:gap-x-10">
+                    <div class="">
+                        <a href={{this.image.url}}>
+                            <img class="hover:grow hover:shadow-lg" src="{{photoGallery.[0].image.url}}">
+                        </a> 
                     </div>
-                </div>
-                <div class="col-span-1">
-                    <div class="container py-8 px-6 mx-auto">
-                        <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-4xl mb-8">
-                            {{name}} 
+                    <div class="space-y-12">
+                        <div class="grid gap-y-3">
+                            <div class="product-title">
+                                {{name}} 
+                            </div>
+                            <div class="product-subtitle">
+                                {{brand}} 
+                            </div>
+                            <div class="product-price">
+                                ${{price.value}} 
+                            </div>
+                            <p class="text-xl">
+                                {{convertRTFToHTML richTextDescription}}
+                            </p>
+                            <p class="text-xl">
+                                <b>Color:</b> {{color}}
+                            </p>
                         </div>
-                        <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-600 text-3xl mb-8">
-                            {{brand}} 
+                        <div class="buttons flex flex-col space-y-5 justify-center w-full px-12">
+                            <button class="product-mainCTA">
+                            Add to Bag
+                            </button>
+                            <button class="product-secondaryCTA">
+                            Favorite
+                            </button>
                         </div>
-                        <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-400 text-3xl mb-8">
-                            ${{price.value}} 
-                        </div>
-                        <p class="mt-8 mb-8 text-xl">{{convertRTFToHTML richTextDescription}}</p>
-                        <p class="mt-8 text-xl"><b>Color:</b> {{color}}</p>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="w-full bg-gray-50">
+            <div class="centered-container">
+                {{>footer}}
+            </div>
+        </div>
     </body> 
-</div>
-
-{{>footer}}
 
 </html>

@@ -45,45 +45,46 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
 </head>
 
-  <div class="container mx-auto px-4">
-    <body>
-        
-    {{>navbar}}
-
-    <div class="container py-8 px-6 mx-auto">
-      <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-2xl mb-8">{{name}}</div>
-      <p class="mt-8 mb-8">{{convertRTFToHTML richTextDescription}}</p>
+<body>
+    <div class="w-full">
+        {{>navbar}}
+		<div class="centered-container">
+			<div class="grid gap-y-10">
+				<div class="grid gap-y-3">
+					<div class="uppercase font-bold text-gray-800 text-2xl">
+						{{name}}
+					</div>
+					<p class="">
+						{{convertRTFToHTML richTextDescription}}
+					</p>
+				</div>
+				<div class="grid gap-x-5 gap-y-5 sm:grid-cols-2 lg:grid-cols-3 md:gap-x-5">
+					{{#each c_relatedProducts}}
+						<div class="p-4 border-2 border-gray-50 rounded-xl justify-self-center hover:grow hover:shadow-lg">
+							<a href={{slug}} class="grid gap-y-5">
+								<div class="">
+									<img class="rounded-xl object-contain sm:h-80 md:h-96" src="{{photoGallery.[0].image.url}}">
+								</div>
+								<div class="grid gap-y-2">
+									<div class="product-grid-title"}>{{name}}</div>
+									<div class="product-grid-subtitle">
+										{{this.brand}}
+									</div>
+									<div class="product-grid-price">
+										${{price.value}} 
+									</div>
+								</div>
+							</a>
+						</div>
+					{{/each}} 
+				</div>
+			</div>
+		</div>
     </div>
-
-    {{#each c_relatedProducts}}
-      <div class="grid grid-cols-7 divide-gray-300 divide-y-4 gap-3 pl-10">
-          <div class="col-span-2">
-              <div class="mb-5">
-                  {{>photoGallery photoGallery}}
-              </div>
-          </div>
-
-          <div class="col-span-5">
-              <div class="container py-8 px-6 mx-auto">
-                  <div>
-                    <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-2xl mb-8 hover:text-blue-900" href={{slug}}>{{name}}</a>
-                  </div>
-                  <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-600 text-xl mb-8 pt-6">
-                      {{brand}} 
-                  </div>
-                  <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-400 text-xl mb-8">
-                      ${{price.value}} 
-                  </div>
-                  <p class="mt-8 mb-8 text-l">{{convertRTFToHTML richTextDescription}}</p>
-                  <p class="mt-8 text-l"><b>Color:</b> {{color}}</p>
-              </div>
-          </div>
-      </div>
-    {{/each}}
-
-    </body> 
-  </div>
-
-{{>footer}}
-
+    <div class="w-full bg-gray-50">
+        <div class="centered-container">
+            {{>footer}}
+        </div>
+    </div>
+</body> 
 </html>

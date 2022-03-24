@@ -6,40 +6,36 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Yext's Fashion Warehouse</title>
-    <meta name="description" content="Luc's Fashion Warehouse Home Page">
-    {{>head}}
-    {{!-- <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> --}}
-    <!--Replace with your tailwind.css once created-->
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet"
-</head>
-  <div class="container mx-auto px-4">
-    <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
-
-        {{>navbar}}
-
-      <div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('/images/luxurystore.jpg'); height: 60vh; max-height:460px;"></div>
-
-        <section class="bg-white py-8">
-            <div class="container py-8 px-6 mx-auto">
-
-                <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-2xl mb-8">Welcome to the Warehouse!</div>
-
-                <p class="mt-8 mb-8">Looking to upgrade your wardrobe this summer? We've got you covered.</p>
-
-                <p class="mb-8">Browse through our site for luxury shoes, tops, and bottoms!</p>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Yext's Fashion Warehouse</title>
+      <meta name="description" content="Luc's Fashion Warehouse Home Page">
+      {{>head}}
+      {{!-- <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet"> --}}
+      <!--Replace with your tailwind.css once created-->
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <div class="w-full">
+          {{>navbar}}
+          <div class="w-full m-0 p-0 bg-cover bg-bottom" style="background-image:url('/images/luxurystore.jpg'); height: 60vh; max-height:460px;"></div>
+          <div class="centered-container">
+            <div class="py-12 grid gap-y-5">
+                <div class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-2xl">Welcome to the Warehouse!</div>
+                <p class="">Looking to upgrade your wardrobe this summer? We've got you covered.</p>
+                <p class="">Browse through our site for luxury shoes, tops, and bottoms!</p>
             </div>
-        </section>
-
-        {{>image-banners}}
-
-      {{>footer}}
-
-    </body>
-  </div>
+            <div class="section">
+              {{>image-banners}}
+            </div>
+          </div>
+      </div>
+      <div class="w-full bg-gray-50">
+          <div class="centered-container">
+              {{>footer}}
+          </div>
+      </div>
+  </body> 
 </html>
