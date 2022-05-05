@@ -19,7 +19,14 @@
         "price",
         "color",
         "brand",
-        "photoGallery"
+        "photoGallery",
+        "c_relatedProducts.name",
+        "c_relatedProducts.slug",
+        "c_relatedProducts.photoGallery",
+        "c_relatedProducts.brand",
+        "c_relatedProducts.price",
+        "c_relatedProducts.color",
+        "c_relatedProducts.richTextDescription"
       ],
       "localization": {
           "locales": ["en"]
@@ -44,8 +51,8 @@
 
     <body>
         <div class="w-full">
-            {{>navbar}}
             <div class="centered-container">
+                {{>navbar}}
                 <div class="section grid gap-y-10 md:grid-cols-2 md:gap-x-10">
                     <div class="">
                         <a href={{this.image.url}}>
@@ -81,7 +88,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
         <div class="w-full bg-gray-50">
             <div class="centered-container">
                 {{>footer}}
