@@ -10,7 +10,7 @@ module.exports = {
         analytics: "./src/analytics.js"
       }, 
     output: {
-        filename: 'index.bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'assets'),
         clean: true
     },
